@@ -24,6 +24,7 @@ class CreateAppVersionsTable extends Migration
             $table->string("download_url")->default('')->comment("下载地址");
             $table->string("description")->default('')->comment("更新说明");
             $table->string("version_alias")->default("")->comment("版本别名 牧羊犬 波斯猫等");
+            $table->softDeletes();
             $table->timestamps();
         });
     }
